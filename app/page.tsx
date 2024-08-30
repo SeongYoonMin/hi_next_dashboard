@@ -22,11 +22,16 @@ const buttonRecipe = cva("", {
       small: ["text-sm", "py-1", "px-2"],
       medium: ["text-base", "py-2", "px-4"],
     },
+    rounded: {
+      lg: ["rounded-lg"],
+      xl: ["rounded-xl"],
+    },
   },
   compoundVariants: [
     {
       intent: "primary",
       size: "medium",
+      rounded: "lg",
       class: "uppercase",
       // **or** if you're a React.js user, `className` may feel more consistent:
       // className: "uppercase"
@@ -41,7 +46,9 @@ const buttonRecipe = cva("", {
 export default function Home() {
   return (
     <main className="">
-      <button className={buttonRecipe({intent: 'secondary'})}>이것은 버튼이여</button>
+      <button className={buttonRecipe({ intent: "secondary", rounded: "xl" })}>
+        이것은 버튼이여
+      </button>
     </main>
   );
 }
