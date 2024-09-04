@@ -1,4 +1,5 @@
 import { cva } from "cva";
+import Link from "next/link";
 
 const buttonRecipe = cva("", {
   variants: {
@@ -46,6 +47,7 @@ const buttonRecipe = cva("", {
 export default function Home() {
   return (
     <main className="">
+      <Link href="/about">ABOUT</Link>
       <button className={buttonRecipe({ intent: "secondary", rounded: "xl" })}>
         이것은 버튼이여
       </button>
