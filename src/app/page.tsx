@@ -1,5 +1,5 @@
+import DefaultLayout from "@/components/Layouts/DefaultLayout";
 import { cva } from "cva";
-import Link from "next/link";
 
 const buttonRecipe = cva("", {
   variants: {
@@ -10,8 +10,6 @@ const buttonRecipe = cva("", {
         "border-transparent",
         "hover:bg-blue-600",
       ],
-      // **or**
-      // primary: "bg-blue-500 text-white border-transparent hover:bg-blue-600",
       secondary: [
         "bg-white",
         "text-gray-800",
@@ -34,8 +32,6 @@ const buttonRecipe = cva("", {
       size: "medium",
       rounded: "lg",
       class: "uppercase",
-      // **or** if you're a React.js user, `className` may feel more consistent:
-      // className: "uppercase"
     },
   ],
   defaultVariants: {
@@ -46,11 +42,10 @@ const buttonRecipe = cva("", {
 
 export default function Home() {
   return (
-    <main className="">
-      <Link href="/about">ABOUT</Link>
+    <DefaultLayout>
       <button className={buttonRecipe({ intent: "secondary", rounded: "xl" })}>
         이것은 버튼이여
       </button>
-    </main>
+    </DefaultLayout>
   );
 }
