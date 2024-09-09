@@ -4,14 +4,19 @@ import React from "react";
 
 const sideRecipe = cva("main_side_bar", {
   variants: {
+    display: {
+      primary: ["flex flex-col items-start justify-start gap-5"],
+    },
     intent: {
       primary: ["bg-red-400"],
+      secondory: ["bg-blue-400"],
     },
     size: {
       medium: ["w-[200px] h-full min-h-screen p-4 box-border"],
     },
   },
   defaultVariants: {
+    display: "primary",
     intent: "primary",
     size: "medium",
   },
@@ -33,6 +38,10 @@ const Sidebar: React.FC = () => {
     {
       name: "ABOUT",
       href: "/about",
+    },
+    {
+      name: "BOARD",
+      href: "/board",
     },
   ];
   return (

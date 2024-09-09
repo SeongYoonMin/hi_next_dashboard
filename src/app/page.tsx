@@ -1,4 +1,4 @@
-import DefaultLayout from "@/components/Layouts/DefaultLayout";
+
 import { cva } from "cva";
 
 const buttonRecipe = cva("", {
@@ -42,10 +42,8 @@ const buttonRecipe = cva("", {
 
 export default function Home() {
   return (
-    <DefaultLayout>
-      <button className={buttonRecipe({ intent: "secondary", rounded: "xl" })}>
-        이것은 버튼이여
-      </button>
-    </DefaultLayout>
+    <button className={buttonRecipe({ intent: "secondary", rounded: "xl" })}>
+      이것은 버튼이여
+    </button>
   );
 }
