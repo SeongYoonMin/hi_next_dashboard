@@ -9,7 +9,8 @@ const meta = {
     layout: "fullscreen",
   },
   args: {
-    colorRecipe: "primary",
+    intentRecipe: "primary",
+    sizeRecipe: "medium",
   },
 } satisfies Meta<typeof Index>;
 
@@ -19,12 +20,28 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    colorRecipe: "primary",
+    intentRecipe: "primary",
+    sizeRecipe: "medium",
   },
 };
 
 export const Secondary: Story = {
   args: {
-    colorRecipe: "secondary",
+    intentRecipe: "secondary",
+    sizeRecipe: "medium",
+  },
+};
+
+export const Small: Story = {
+  args: {
+    intentRecipe: "primary",
+    sizeRecipe: "small",
+  },
+};
+
+export const Large: Story = {
+  args: {
+    intentRecipe: "primary",
+    sizeRecipe: "large",
   },
 };
